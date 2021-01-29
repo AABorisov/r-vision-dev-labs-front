@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "ahooks": "^2.9.4",
     "antd": "^4.11.2",
     "next": "latest",
     "react": "^16.12.0",
