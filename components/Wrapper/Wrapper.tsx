@@ -11,7 +11,8 @@ const Wrapper: React.FC = ({ children }) => {
         <Menu
           mode="inline"
         >
-          <Menu.Item key="1">Пример элемента</Menu.Item>
+          <Menu.Item key="1">Dashboard</Menu.Item>
+          <Menu.Item key="2">File</Menu.Item>
         </Menu>
       </Sider>
       <Layout>
