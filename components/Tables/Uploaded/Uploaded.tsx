@@ -34,7 +34,7 @@ const columns = [
       compare: (a: any, b: any) => a.author - b.author,
     }
   }, {
-    title: "Двта создания",
+    title: "Дата создания",
     dataIndex: "creationDate",
     sorter: {
       compare: (a: any, b: any) => a.creationDate - b.creationDate,
