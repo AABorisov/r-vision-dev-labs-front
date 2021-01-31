@@ -91,7 +91,7 @@ const TxtContent: React.FC = () => {
                    content: 'ioc';
                 }
                 
-                .styles_minimapWindow__2BGG2 {
+                .ant-row .styles_minimapWindow__2BGG2 {
                    top: 150px;
                    right: unset;
                    left: 100px;
@@ -102,7 +102,7 @@ const TxtContent: React.FC = () => {
                 }
                 
                 `}</style>
-                <Minimap of={renderPage()} width={100} height={'calc(100vh - 300px)'} className={classes.minimap}/>
+                <Minimap of={renderPage()} width={100} height={'calc(100vh - 300px)'} className={'minimap'}/>
                 {renderPage()}
             </Row>
         </Card>

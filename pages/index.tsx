@@ -14,9 +14,39 @@ const Home: React.FC = () => {
     const [filtered, setFiltered] = useState<IRecognizedTableRow[]>([]);
     const [uploaded, setUploaded] = useState<IUploadedTableRow[]>([]);
 
+
+
     useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+        };
+
+        fetch('https://cybersecurity.devlabs-hack.ru/api/v1/documents/', requestOptions)
+            .then((response) => response.json())
+            // .then((response) => console.log(response))
+            .then((result) => {
+                return result.map((row: {id: number, original_name: string, document_type?: string, created_at: string}) => {
+                    return {
+                        key: row.id,
+                        id: row.id,
+                        document: row.original_name,
+                        category: row.document_type || 'Article',
+                        creationDate: row.created_at,
+                    };
+                });
+            })
+            .then((result) => {
+                setUploaded(result);
+            })
+            .catch((error) => {
+                console.log('error', error)
+                return [];
+            })
+            .finally(() => {
+                // setUploaded(result);
+            })
+        ;
         setFiltered(recognizedMock);
-        setUploaded(uploadedMock);
     }, []);
 
     const onFilter = (value: any, fieldName: string) => {
