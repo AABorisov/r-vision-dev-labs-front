@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Typography } from 'antd';
 import Filters from '../components/Filters/Filters';
+import Chart from '../components/Charts/Chart';
 import Recognized from '../components/Tables/Recognized/Recognized';
 import Uploaded from '../components/Tables/Uploaded/Uploaded';
 import recognizedMock from '../mocks/recognized';
@@ -32,6 +33,7 @@ const Home: React.FC = () => {
             <Filters onFilter={onFilter} />
             <Recognized data={filtered} />
             <Uploaded data={uploaded} />
+            <Chart />
         </>
     );
 };
