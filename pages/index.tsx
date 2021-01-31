@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Typography } from 'antd';
-import Wrapper from '../components/Wrapper';
+import React, {useEffect, useState} from 'react';
+import {Typography} from 'antd';
 import Filters from '../components/Filters/Filters';
 import Recognized from '../components/Tables/Recognized/Recognized';
 import Uploaded from '../components/Tables/Uploaded/Uploaded';
 import recognizedMock from '../mocks/recognized';
 import uploadedMock from '../mocks/uploaded';
-import { IRecognizedTableRow, IUploadedTableRow } from '../interfaces';
+import {IRecognizedTableRow, IUploadedTableRow} from '../interfaces';
+import FileUploadPopup from "../components/Popups/FileUploadPopup/FileUploadPopup";
 
-const { Title } = Typography;
+const {Title} = Typography;
 
 const Home: React.FC = () => {
     const [filtered, setFiltered] = useState<IRecognizedTableRow[]>([]);
@@ -26,12 +26,13 @@ const Home: React.FC = () => {
     };
 
     return (
-        <Wrapper>
+        <>
+            <FileUploadPopup/>
             <Title>Dashboard</Title>
-            <Filters onFilter={onFilter} />
-            <Recognized data={filtered} />
-            <Uploaded data={uploaded} />
-        </Wrapper>
+            <Filters onFilter={onFilter}/>
+            <Recognized data={filtered}/>
+            <Uploaded data={uploaded}/>
+        </>
     );
 };
 
