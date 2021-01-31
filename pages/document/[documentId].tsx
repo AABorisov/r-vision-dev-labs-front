@@ -26,7 +26,6 @@ const Document: React.FC = () => {
     });
 
     return (
-        <Wrapper>
             <Row>
                 <Col
                     style={{
@@ -47,7 +46,6 @@ const Document: React.FC = () => {
                     <NlpTable documentTitle={'Talos_-_The_art_and_science'} data={nlpTable} />
                 </Col>
             </Row>
-        </Wrapper>
     );
 };
 

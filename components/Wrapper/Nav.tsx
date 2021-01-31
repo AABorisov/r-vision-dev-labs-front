@@ -1,14 +1,14 @@
-import React, {useContext} from "react";
-import {Menu} from "antd";
-import {PlusOutlined} from "@ant-design/icons";
-import {PopupUploadContext} from "../../contexts/PopupUploadContext";
+import React, { useContext } from 'react';
+import { Menu } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
+import { PopupUploadContext } from '../../contexts/PopupUploadContext';
 
 export const Nav = () => {
-    const {toggle} = useContext(PopupUploadContext)
+    const { toggle } = useContext(PopupUploadContext);
 
     const onAddDocument = () => {
-        toggle!()
-    }
+        toggle!();
+    };
 
     return (
         <Menu mode="inline">
@@ -20,12 +20,12 @@ export const Nav = () => {
             >
                 Logo
             </Menu.Item>
-            <Menu.Divider/>
+            <Menu.Divider />
             <Menu.Item key="1">Dashboard</Menu.Item>
             <Menu.Item key="2">File</Menu.Item>
             <Menu.Item key="+" onClick={onAddDocument}>
-                <PlusOutlined/>
+                <PlusOutlined />
             </Menu.Item>
         </Menu>
-    )
-}
+    );
+};
