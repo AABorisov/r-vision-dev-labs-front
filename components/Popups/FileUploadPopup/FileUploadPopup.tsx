@@ -1,14 +1,10 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {Modal} from "antd";
+import {PopupUploadContext} from "../../../contexts/PopupUploadContext";
 
-interface IProps {
-    isVisible: boolean;
-    onCancel: () => void;
-}
-
-const FileUploadPopup = ({isVisible, onCancel}: IProps) => {
+const FileUploadPopup = () => {
+    const {isShow, toggle} = useContext(PopupUploadContext)
     const [file, setFile] = useState<string | Blob>("")
-
 
     const handleImagePreview = (e: any) => {
         setFile(e.target.files[0])
@@ -37,10 +33,9 @@ const FileUploadPopup = ({isVisible, onCancel}: IProps) => {
     }
 
     return (
-        <Modal title="Upload file" visible={isVisible} footer={null} onCancel={onCancel}>
+        <Modal title="Upload file" visible={isShow} footer={null} onCancel={() => toggle!()}>
             <div>
                 <input type="file" onChange={handleImagePreview}/>
-                <label>Upload file</label>
                 <input type="submit" onClick={handleSubmitFile} value="Submit"/>
             </div>
         </Modal>
