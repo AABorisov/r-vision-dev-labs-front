@@ -49,9 +49,9 @@ export type IUploadedTableRow = {
 };
 
 export type INlpTableRow = {
-  key: string,
-  attribute_name: string,
-  attribute_value: string|number,
-  status: number,
-  nlp_id: number,
-}
+    key: string;
+    attribute_name: string;
+    attribute_value: string | number;
+    status: number;
+    nlp_id: number;
+};
