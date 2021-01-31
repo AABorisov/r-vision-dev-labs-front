@@ -1,3 +1,4 @@
+import React from "react";
 import Wrapper from '../../components/Wrapper';
 
 import { Row, Col  } from "antd"
@@ -10,7 +11,8 @@ import TxtContent from "../../components/Content/TxtContent/TxtContent";
 const Document: React.FC = () => {
   const router = useRouter()
   const { documentId } = router.query;
-  const nlpRow = recognizedMock.filter((item) => item.document_id === parseInt(documentId));
+  const docId = typeof documentId === 'string' ? documentId : documentId[0];
+  const nlpRow = recognizedMock.filter((item) => item.document_id === parseInt(docId));
 
   const nlp_table = nlpRow.length ? Object.entries(nlpRow[0]) : [];
 

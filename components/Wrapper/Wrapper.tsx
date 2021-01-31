@@ -38,9 +38,12 @@ const Wrapper: React.FC = ({ children }) => {
             </Header>
             <Content
               style={{
-                minHeight: 'calc(100vh - 64px)'
+                minHeight: 'calc(100vh - 64px)',
+                height: 'calc(100vh - 64px)',
+                maxHeight: 'calc(100vh - 64px)',
+                overflow: "auto"
               }}>
-              {children}
+                {children}
             </Content>
           </Layout>
         </Content>
