@@ -29,7 +29,11 @@ const FileUploadPopup = () => {
         fetch('https://cybersecurity.devlabs-hack.ru/api/v1/document_upload/', requestOptions)
             .then((response) => response.text())
             .then((result) => console.log(result))
-            .catch((error) => console.log('error', error));
+            .catch((error) => console.log('error', error))
+            .finally(()=>{
+                toggle();
+            })
+        ;
     };
 
     return (
