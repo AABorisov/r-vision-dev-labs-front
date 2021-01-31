@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 
     return (
         <>
-            <FileUploadPopup isVisible={false} onCancel={() => true}/>
+            <FileUploadPopup/>
             <Title>Dashboard</Title>
             <Filters onFilter={onFilter}/>
             <Recognized data={filtered}/>
