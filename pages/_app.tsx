@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import React from 'react';
 import Wrapper from '../components/Wrapper';
 import 'antd/dist/antd.css';
+// import '../styles.css'
 
 const Application = ({ Component, pageProps }: AppProps) => {
     return (
