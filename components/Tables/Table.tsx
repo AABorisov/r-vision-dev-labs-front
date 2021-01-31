@@ -1,9 +1,12 @@
-import { Table as AntdTable } from "antd";
+import { Table as AntdTable } from 'antd';
+import React from 'react';
 
-const Table: React.FC = ({ children }) => {
-  return <AntdTable>
-    {children}
-  </AntdTable>;
+interface IProps {
+    children: any;
+}
+
+const Table = ({ children }: IProps) => {
+    return <AntdTable>{children}</AntdTable>;
 };
 
 export default Table;

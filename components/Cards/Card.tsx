@@ -1,15 +1,18 @@
-import {Layout, Card as AntdCard} from 'antd';
-
+import React from 'react';
+import { Layout, Card as AntdCard } from 'antd';
 import classes from './Card.module.scss';
 
-const Card: React.FC<{title: string}> = ({ title, children }) => {
-  return (
-    <Layout className={classes.container}>
-      <AntdCard title={title}>
-        { children }
-      </AntdCard>
-    </Layout>
-  );
+interface IProps {
+    title: string;
+    children: any;
 }
+
+const Card = ({ title, children }: IProps) => {
+    return (
+        <Layout className={classes.container}>
+            <AntdCard title={title}>{children}</AntdCard>
+        </Layout>
+    );
+};
 
 export default Card;
