@@ -47,3 +47,11 @@ export type IUploadedTableRow = {
     author: string;
     creationDate: string;
 };
+
+export type INlpTableRow = {
+    key: string;
+    attribute_name: string;
+    attribute_value: string | number;
+    status: number;
+    nlp_id: number;
+};
