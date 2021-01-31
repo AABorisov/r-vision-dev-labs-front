@@ -3,7 +3,7 @@ import { IRecognizedTableRow } from '../interfaces';
 const recognized: IRecognizedTableRow[] = [
     {
         key: 1,
-        document_id: 2,
+        document_id: 1,
         cve: 'value 1',
         cwe: 'value 2',
         software: 'value 3',
@@ -49,7 +49,7 @@ const recognized: IRecognizedTableRow[] = [
     },
     {
         key: 3,
-        document_id: 2,
+        document_id: 3,
         cve: 'value 1',
         cwe: 'value 2',
         software: 'value 3',
@@ -72,7 +72,7 @@ const recognized: IRecognizedTableRow[] = [
     },
     {
         key: 4,
-        document_id: 2,
+        document_id: 4,
         cve: 'value 1',
         cwe: 'value 2',
         software: 'value 3',
@@ -95,7 +95,7 @@ const recognized: IRecognizedTableRow[] = [
     },
     {
         key: 5,
-        document_id: 2,
+        document_id: 5,
         cve: 'value 1',
         cwe: 'value 2',
         software: 'value 3',
