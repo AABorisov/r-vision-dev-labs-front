@@ -25,6 +25,7 @@ const Document: React.FC = () => {
         };
     });
 
+    'https://cybersecurity.devlabs-hack.ru/api/v1/document_view/2/'
     return (
             <Row>
                 <Col
@@ -32,6 +33,9 @@ const Document: React.FC = () => {
                         width: '70%',
                         minWidth: '70%',
                         maxWidth: '70%',
+                        height: 'calc(100vh - 64px);',
+                        maxHeight: 'calc(100vh - 64px);',
+                        overflowY: 'auto',
                     }}
                 >
                     <TxtContent />
